@@ -1,5 +1,6 @@
 package com.ddtkey.graphs;
 
+import com.ddtkey.graphs.impl.DirectedGraph;
 import com.ddtkey.graphs.impl.UndirectedGraph;
 
 import java.util.Set;
@@ -17,4 +18,11 @@ public interface Graph<V> {
         return new UndirectedGraph<>();
     }
 
+    /**
+     * @param <V> the Graph element type
+     * @return empty directed implementation of {@code Graph}
+     */
+    static <V> Graph<V> directedGraph() {
+        return new DirectedGraph<>();
+    }
 }
