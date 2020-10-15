@@ -3,7 +3,7 @@ package com.ddtkey.graphs.api;
 import com.ddtkey.graphs.impl.DirectedGraph;
 import com.ddtkey.graphs.impl.UndirectedGraph;
 
-import java.util.Set;
+import java.util.List;
 
 /**
  * Simple Graph with the ability to specify the data type for vertices.
@@ -27,7 +27,7 @@ public interface Graph<V> {
      */
     void addEdge(V firstValue, V secondValue) throws IllegalArgumentException;
 
-    Set<V> getPath(V from, V to);
+    List<V> getPath(V from, V to);
 
     /**
      * @param <V> the Graph element type
