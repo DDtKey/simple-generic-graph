@@ -6,7 +6,12 @@ class Vertex<T> {
     private T data;
 
     public Vertex(T data) {
+        Objects.requireNonNull(data);
         this.data = data;
+    }
+
+    public T getData() {
+        return data;
     }
 
     @Override
@@ -20,5 +25,10 @@ class Vertex<T> {
     @Override
     public int hashCode() {
         return Objects.hash(data);
+    }
+
+    @Override
+    public String toString() {
+        return Objects.toString(data);
     }
 }
