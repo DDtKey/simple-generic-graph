@@ -1,4 +1,4 @@
-package com.ddtkey.graphs;
+package com.ddtkey.graphs.api;
 
 import com.ddtkey.graphs.impl.DirectedGraph;
 import com.ddtkey.graphs.impl.UndirectedGraph;
@@ -26,6 +26,7 @@ public interface Graph<V> {
      * @param secondValue - the value whose vertex should be associated with the vertex of the {@code firstValue}
      */
     void addEdge(V firstValue, V secondValue) throws IllegalArgumentException;
+
     Set<V> getPath(V from, V to);
 
     /**

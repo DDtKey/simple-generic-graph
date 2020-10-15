@@ -1,18 +1,18 @@
 package com.ddtkey.graphs.impl;
 
-import com.ddtkey.graphs.Graph;
+import com.ddtkey.graphs.api.Graph;
 
 import java.util.*;
 
 public class UndirectedGraph<V> implements Graph<V> {
-    protected final Map<Vertex<V>, List<Vertex<V>>> adjacencyVertices = new HashMap<>();
+    protected final Map<Vertex<V>, Set<Vertex<V>>> adjacencyVertices = new HashMap<>();
 
     public UndirectedGraph() {
     }
 
     @Override
     public void addVertex(V value) {
-        this.adjacencyVertices.putIfAbsent(new Vertex<>(value), new ArrayList<>());
+        this.adjacencyVertices.putIfAbsent(new Vertex<>(value), new HashSet<>());
     }
 
     @Override
